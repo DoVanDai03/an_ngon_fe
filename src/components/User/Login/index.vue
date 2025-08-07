@@ -59,10 +59,13 @@ async function handleLogin() {
             toast.success(data.message)
             localStorage.setItem('token', data.token)
             localStorage.setItem('vai_tro', JSON.stringify(data.data.vai_tro))
+            // 👉 Chuyển trang
+            router.push('/')
+        } else {
+            
         }
 
-        // 👉 Chuyển trang
-        router.push('/')
+        
     } catch (err) {
         error.value = err
     } finally {

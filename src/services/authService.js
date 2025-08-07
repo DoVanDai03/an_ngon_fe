@@ -1,7 +1,7 @@
 // src/services/authService.js
 import axios from 'axios'
 
-const API = 'http://localhost:3000/api/auth'
+const API = 'http://localhost:3001/api/auth'
 
 export async function login(email, mat_khau) {
   try {
