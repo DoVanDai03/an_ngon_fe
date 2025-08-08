@@ -24,6 +24,52 @@ const routes = [
         meta: {layout: 'Login'},
       }
     ]
+  },
+  {
+    path: '/teacher',
+    children: [
+      {
+        path: 'login',
+        name: 'TeacherLogin',
+        component: () => import('../components/Teacher/Login/index.vue'),
+        meta: {layout: 'Login'},
+      },
+      {
+        path: 'register',
+        name: 'TeacherRegister',
+        component: () => import('../components/Teacher/Register/index.vue'),
+        meta: {layout: 'Register'},
+      },
+      {
+        path: 'verify-email',
+        name: 'TeacherVerifyEmail',
+        component: () => import('../components/Teacher/Mail/verify.vue'),
+        meta: {layout: 'Login'},
+      }
+    ]
+  },
+  {
+    path: '/restaurant',
+    children: [
+      {
+        path: 'login',
+        name: 'RestaurantLogin',
+        component: () => import('../components/Restaurant/Login/index.vue'),
+        meta: {layout: 'Login'},
+      },
+      {
+        path: 'register',
+        name: 'RestaurantRegister',
+        component: () => import('../components/Restaurant/Register/index.vue'),
+        meta: {layout: 'Register'},
+      },
+      {
+        path: 'verify-email',
+        name: 'RestaurantVerifyEmail',
+        component: () => import('../components/Restaurant/Mail/verify.vue'),
+        meta: {layout: 'Login'},
+      }
+    ]
   }
   // Thêm các route khác ở đây nếu cần
 ];
